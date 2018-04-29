@@ -28,6 +28,7 @@ return array(
 'css_path' => 'http://localhost/phpcms/statics/css/', //CDN CSS
 'img_path' => 'http://localhost/phpcms/statics/images/', //CDN img
 'app_path' => 'http://localhost/phpcms/',//动态域名配置地址
+'bs_path' => 'http://localhost/phpcms/bs/', //CDN bs
 
 'charset' => 'utf-8', //网站字符集
 'timezone' => 'Etc/GMT-8', //网站时区（只对php 5.1以上版本有效），Etc/GMT-8 实际表示的是 GMT+8

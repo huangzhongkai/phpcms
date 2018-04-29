@@ -492,5 +492,19 @@ return array (
     'installdate' => '2011-09-02',
     'updatedate' => '2011-09-02',
   ),
+  'test' => 
+  array (
+    'module' => 'test',
+    'name' => '测试',
+    'url' => '',
+    'iscore' => '0',
+    'version' => '',
+    'description' => '',
+    'setting' => '',
+    'listorder' => '0',
+    'disabled' => '0',
+    'installdate' => '0000-00-00',
+    'updatedate' => '0000-00-00',
+  ),
 );
 ?>

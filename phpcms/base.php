@@ -49,6 +49,8 @@ define('CSS_PATH',pc_base::load_config('system','css_path'));
 define('IMG_PATH',pc_base::load_config('system','img_path'));
 //动态程序路径
 define('APP_PATH',pc_base::load_config('system','app_path'));
+//bs
+define('BS_PATH',pc_base::load_config('system','bs_path'));
 
 //应用静态文件路径
 define('PLUGIN_STATICS_PATH',WEB_PATH.'statics/plugin/');
