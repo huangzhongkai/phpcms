@@ -1,0 +1,22 @@
+{template "content","header"}
+<div class="content">
+    <div class="nav2"></div>
+    {pc:content  action="category" siteid="1"}
+    {loop $data $row}
+
+    <div class="panel panel-danger">
+        <div class="panel-heading article">
+            <a href="{$row['url']}">{$row['catname']}</a>
+        </div>
+        <div class="list-group">
+            {pc:content  action="lists" catid="$row[catid]" order="id DESC"}
+            {loop $data $art}
+            <a href="{$art['url']}" class="list-group-item">{$art["title"]}</a>
+            {/loop}
+            {/pc}
+        </div>
+    </div>
+    {/loop}
+    {/pc}
+</div>
+{template "content","footer"}

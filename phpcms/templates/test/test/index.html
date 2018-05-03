@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>show</title>
+    <link rel="stylesheet" href="{BS_PATH}css/bootstrap.css">
+    <script src="{BS_PATH}js/jquery.js"></script>
+    <script src="{BS_PATH}js/bootstrao.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h3 class="page-header">
+            <a href="" class="btn btn-primary">查看用户</a>
+        </h3>
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>Username</th>
+                <th>Password</th>
+            </tr>
+            {pc:get sql="select * from test order by id " num="4" page="$_GET[page]" }
+                {loop $data $row}
+                    <tr>
+                        <td>{$row[id]}</td>
+                        <td>{$row[username]}</td>
+                        <td>{$row[password]}</td>
+                    </tr>
+                {/loop}
+            {/pc}
+            <tr>
+                <td colspan="3">
+                    {$pages}
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

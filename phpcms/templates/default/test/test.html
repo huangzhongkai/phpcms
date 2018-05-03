@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>show</title>
+    <link rel="stylesheet" href="{BS_PATH}css/bootstrap.css">
+    <script src="{BS_PATH}js/jquery.js"></script>
+    <script src="{BS_PATH}js/bootstrao.js"></script>
+    <link rel="stylesheet" href="{CSS_PATH}test.css">
+</head>
+<body>
+    <div class="container" >
+        <div class="header">
+            <ul class="nav nav-pills">
+                <li><img src="{IMG_PATH}admin_img/logo_1.gif" alt=""></li>
+                <li><a href="">首页</a></li>
+                {pc:content  action="category" siteid="1"}
+                    {loop $data $row}
+                        <li><a href="{$row['url']}">{$row['catname']}</a></li>
+                    {/loop}
+                {/pc}
+                <li><a href="">人才招聘</a></li>
+                <li><a href="">企业介绍</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="nav2"></div>
+            {pc:content  action="category" siteid="1"}
+            {loop $data $row}
+
+            <div class="panel panel-danger">
+                <div class="panel-heading article">
+                    <a href="{$row['url']}">{$row['catname']}</a>
+                </div>
+                <div class="list-group">
+                    {pc:content  action="lists" catid="$row[catid]" order="id DESC"}
+                    {loop $data $art}
+                        <a href="{$art['url']}" class="list-group-item">{$art["title"]}</a>
+                    {/loop}
+                    {/pc}
+                </div>
+            </div>
+            {/loop}
+            {/pc}
+        </div>
+        <div class="footer">
+            <ul class="nav nav-pills">
+                <li><a href="">关于我们</a></li>
+                <li><a href="">联系方式</a></li>
+                <li><a href="">公司地址</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

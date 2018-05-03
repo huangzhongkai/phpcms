@@ -255,7 +255,7 @@ class index extends foreground {
 				}
 				$description = $modellist[$modelid]['description'];
 				
-				include template('member', 'register');
+
 			}
 		}
 	}
