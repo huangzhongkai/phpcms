@@ -1,0 +1,144 @@
+{template "content","header"}
+
+
+<link href="daxibei/css/index.css" rel="stylesheet" type="text/css"; />
+<link href="daxibei/css/article.css" rel="stylesheet" type="text/css"; />
+<link href="daxibei/css/article_article.css" rel="stylesheet" type="text/css"; />
+<script>
+<!--
+/*第一种形式 第二种形式 更换显示样式*/
+function setTab(name,cursel,n){
+ for(i=1;i<=n;i++){
+  var menu=document.getElementById(name+i);
+  var con=document.getElementById("con_"+name+"_"+i);
+  menu.className=i==cursel?"hover":"";
+  con.style.display=i==cursel?"block":"none";
+ }
+}
+//-->
+</script>
+
+
+
+<div class="magtop"></div>
+
+
+
+
+
+<div class="content_page">
+
+<div class="content_page_right_bt"><div class="content_page_right_bt_left">当前位置：<a href="{siteurl($siteid)}">首页</a><span> &gt; </span>{catpos($catid)}{$title}</div>
+</div>
+<div class="content_page_1">
+	<table height="130" width="960" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td class="tdd" width="200">  <li>
+    <a href='{$url}' target='_blank'><img src="{thumb($r[thumb])}"  width='186'  border='0'/></a>
+
+  </li></td>
+        <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr height="90">
+                <td>
+                      <div class="intro">
+					  
+					  {if $description}{$description}{/if}
+					  
+					  </div>
+                      
+                 </td>
+              </tr>
+              <tr height="40">
+                <td>
+                	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td class="tdd1"><span>所属栏目：</span>{$CATEGORYS[$catid][catname]}&#160;&#160;&#160;&#160;&#160;&#160;<span>时间：</span>{$inputtime}</td>
+                        <td width="15%"><a href="{$wangzhibugeili}" target="_blanlk"><img src="daxibei/images/wangzhan.jpg"/></a></td>
+                      </tr>
+                    </table>
+
+                </td>
+              </tr>
+            </table>
+
+        
+        </td>
+      </tr>
+    </table>
+
+
+</div>
+<div class="content_page_2">
+	<div class="cont">
+	
+<p>
+
+{$content}
+
+&nbsp;</p>
+	</div>
+		
+		<div class="boxoff">
+				
+		  </div>
+			<div class="handle">
+				
+					
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="50%" height="30" align="left">上一篇：<a href="{$previous_page[url]}">{$previous_page[title]}</a></td>
+                        <td width="50%" height="30" align="right">下一篇：<a href="{$next_page[url]}">{$next_page[title]}</a> </td>
+                      </tr>
+                    </table>
+				
+				
+			</div>
+			
+</div>
+
+
+<div class="index_case">
+ <div class="in_showcas">
+  <img src="daxibei/images/tuijian.jpg"/>
+ </div>
+  <div class="index_case_nr">
+
+    <ul>
+
+
+          {pc:content action="relation" relation="$relation" id="$id" catid="$catid" num="5" keywords="$rs[keywords]"}
+              {if $data}
+              
+                        {loop $data $r}
+						
+					<li>
+                <center>
+       <a href="{$r[url]}"  target="_blank"><img src="{thumb($r[thumb])}" border='0' width='211' height='149' alt='{$r[title]}'></a>
+                </center>
+              <span><a href="{$r[url]}"  target="_blank">{$r[title]}</a></span></li>	
+						
+						
+						
+                            <li>・<a href="{$r[url]}" target="_blank">{$r[title]}</a><span>({date('Y-m-d',$r[inputtime])})</span></li>
+                        {/loop}
+            
+              {/if}
+          {/pc}
+
+
+			  
+			  
+			  
+			  
+  
+    </ul>
+
+  </div>
+</div>
+
+</div>
+
+
+
+{template "content","footer"}

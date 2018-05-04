@@ -1,0 +1,46 @@
+/* CSS Document */
+
+body {margin:0; padding:0; font-family:"Î¢ÈíÑÅºÚ"; font-size:12px; color:#362820 ;}
+ul,li { padding:0px; margin:0px; list-style:none;}
+* { margin:0; padding:0;}
+img { border:0;}
+a{ text-decoration:none; color:#4d4c4c; }
+a:hover{ color:#e94f03;}
+p{ margin:0; padding:0;}
+.clear{ clear:both;}
+
+.pack_box{ width:980px; height:auto; margin:0 auto; background-color:#f8f8f8; padding-bottom:15px;}
+.pack_tit{ width:960px; height:65px; float:left; margin-left:10px;}
+
+.pack_number01{ width:948px; height:250px; float:left; margin-left:15px;_margin-left:8px; margin-top:15px;}
+.packnum_main{ width:946px; height:238px; float:left; background-color:#fff; border:1px solid #d5d5d5; border-bottom:none; border-top:none;}
+.pack03{ height:210px;}
+.packnum_tit{ width:915px; height:45px; float:left; margin-left:15px; _margin-left:8px; margin-top:5px;}
+.packcompany{ width:400px; height:45px; float:left;font-size:15px;line-height:35px; font-weight:bold; overflow:hidden;}
+.packcomright{ float:right; line-height:35px; color:#316ac5;}
+.packnum01img{ width:900px; height:165px; float:left; margin-left:15px;}
+.packnum01img li{ width:225px; height:160px; float:left;}
+.p_pica{ width:225px; height:105px; float:left; background:url(pack01.jpg) no-repeat top;}
+.p_pica:hover{ background:url(pack01.jpg) no-repeat bottom;}
+.picwd{width:225px; display:block; line-height:25px; text-align:center; font-size:13px;font-weight:bold;}
+.p_pica01{ width:225px; height:105px; float:left; background:url(pack02.jpg) no-repeat top;}
+.p_pica01:hover{ background:url(pack02.jpg) no-repeat bottom;}
+.p_pica02{ width:225px; height:105px; float:left; background:url(pack03.jpg) no-repeat top;}
+.p_pica02:hover{ background:url(pack03.jpg) no-repeat bottom;}
+.p_pica03{ width:225px; height:105px; float:left; background:url(pack04.jpg) no-repeat top;}
+.p_pica03:hover{ background:url(pack04.jpg) no-repeat bottom;}
+
+.p2_pica{ width:225px; height:105px; float:left; background:url(pack201.jpg) no-repeat top;}
+.p2_pica:hover{ background:url(pack201.jpg) no-repeat bottom;}
+.p2_pica01{ width:225px; height:105px; float:left; background:url(pack202.jpg) no-repeat top;}
+.p2_pica01:hover{ background:url(pack202.jpg) no-repeat bottom;}
+.p2_pica02{ width:225px; height:105px; float:left; background:url(pack203.jpg) no-repeat top;}
+.p2_pica02:hover{ background:url(pack203.jpg) no-repeat bottom;}
+.p2_pica03{ width:225px; height:105px; float:left; background:url(pack204.jpg) no-repeat top;}
+.p2_pica03:hover{ background:url(pack204.jpg) no-repeat bottom;}
+
+.pack03wd{ line-height:35px;font-size:13px;font-weight:bold; display:block; margin-top:10px;}
+.pack_03{ width:915px; height:170px; float:left;}
+
+.pack_04{ width:948px; height:35px; line-height:35px; margin-left:35px;_margin-left:25px;font-size:13px;font-weight:bold; }
+

@@ -1,0 +1,119 @@
+
+{template "content","header"}
+
+
+
+
+<link href="daxibei/css/article.css" rel="stylesheet" type="text/css"; />
+
+<script>
+    <!--
+    /*第一种形式 第二种形式 更换显示样式*/
+    function setTab(name,cursel,n){
+        for(i=1;i<=n;i++){
+            var menu=document.getElementById(name+i);
+            var con=document.getElementById("con_"+name+"_"+i);
+            menu.className=i==cursel?"hover":"";
+            con.style.display=i==cursel?"block":"none";
+        }
+    }
+    //-->
+</script>
+
+
+<div class="magtop"></div>
+
+<div class="content_page">
+	<div class="content_page_left">
+		<table width="200" height="43" border="0" cellpadding="0" cellspacing="0" background="daxibei/images/wzjs_bg.jpg">
+			<tr>
+				<td width="38">&nbsp;</td>
+				<td width="162" class="content_page_left_bt">{$CATEGORYS[$CAT[parentid]][catname]}
+				</td>
+			</tr>
+		</table>
+
+		<div class="content_page_left_bt1"></div>
+		<div class="content_page_left_nr">
+			<ul>
+
+
+				{pc:content action="category" catid="$parentid" num="25" siteid="$siteid" order="listorder ASC"}
+				{loop $data $r}
+				<li><a href="{$r[url]}">{$r[catname]}</a></li>
+				{/loop}
+				{/pc}
+
+
+			</ul>
+			<div class="content_page_left_bottom"></div>
+		</div>
+		<img src="daxibei/images/zxzx.jpg" style="float:left; margin-top:5px; clear:both;"/>
+		<div class="news_page_bt1"></div>
+		<div class="news_page_nr"><ul>
+
+
+			{pc:content action="hits" catid="$catid" num="8" order="monthviews DESC" cache="3600"}
+
+			{loop $data $r}
+
+
+			<li class="yhx"><a href="{$r[url]}"  width="126"  height="148" border="0" ><span class="title">{str_cut($r[title],56,'...')}</span></a></li>
+
+
+			{/loop}
+
+			{/pc}
+
+
+
+
+		</ul>
+			<div class="news_page_bottom"></div>
+		</div>
+
+	</div><div class="right">
+	<div class="content_page_right">
+		<div class="content_page_right_bt">
+			<div class="content_page_right_bt_left">当前位置：<a href="{siteurl($siteid)}">首页</a><span> > </span>{catpos($catid)}  </div>
+		</div>
+		<div class="content_page_right_bt_right_nr">
+			<div class="content_news">
+
+				<p><br />
+
+					{$CATEGORYS[$catid][description]}
+
+				</p>
+
+				{pc:content action="lists" catid="$catid" num="2" order="id DESC" page="$page"}
+
+				{loop $data $r}
+
+				<li><a href="{$r[url]}" target="_blank"{title_style($r[style])}>{$r[title]}</a></li>
+
+				{/loop}
+
+
+				{/pc}
+
+
+			</div>
+
+		</div>
+
+		<div class="dede_pages_01">
+			<ul class="pagelist_01">
+				<li>{$pages}</li>
+
+			</ul>
+		</div><!-- /pages -->
+	</div>
+
+</div>
+</div>
+
+</div>
+
+
+{template "content","footer"}

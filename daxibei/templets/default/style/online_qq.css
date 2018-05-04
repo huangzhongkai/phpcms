@@ -1,0 +1,53 @@
+img {border:none;}
+.h_box {
+	width:40px;
+	text-align:left;
+	color:#CC000C;
+	float:right;
+	position:fixed !important;
+	top/**/:200px;
+	position:absolute;
+	z-index:300;
+	right:0px;
+}
+* html .h_box{top:expression(offsetParent.scrollTop+200);}
+.h_left {
+	width:45px;
+	_width:43px;
+	height:auto;
+	position:absolute;
+	cursor:pointer;
+	
+	
+}
+
+
+.h_right {
+	display:none;
+	width:110px;
+	
+	background-color:#fff;
+	
+	
+	_height:213px;
+	overflow:hidden;
+	zoom:1;
+	float:right;
+
+
+}
+.h_right_box {
+	width:110px;height:auto;
+}
+
+
+.online_talk {margin:0 auto;margin-top:12px;cursor:pointer;}
+.online_qq {margin-top:12px;cursor:pointer;}
+.online_qq_sale {margin-top:12px;cursor:pointer;}
+.online_bottom {width:110px;height:18px;_height:16px;
+background:url(../images/online_bottom.jpg) no-repeat;background-position:0 5px;margin-top:20px;}
+.online_x {display:block;margin-left:90px;_margin-top:-1px;cursor:pointer;}
+
+
+
+

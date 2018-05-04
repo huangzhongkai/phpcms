@@ -1,0 +1,145 @@
+
+
+
+{template "content","header"}
+
+<link href="daxibei/css/article.css" rel="stylesheet" type="text/css"; />
+<link href="daxibei/css/article_article.css" rel="stylesheet" type="text/css"; />
+
+<div class="magtop"></div>
+
+
+
+
+
+<div class="content_page">
+<div class="content_page_left">
+  <img src="daxibei/images/tjwz.jpg" style="float:left"/>
+
+<div class="content_page_left_nr_zz">
+<ul>
+
+
+			{pc:content  action="hits" catid="$catid" num="10" order="views DESC" cache="3600"}
+				{loop $data $r}
+				
+<li class="yhx"><a href="{$r[url]}"  width="126"  height="148" border="0" ><span class="title">{str_cut($r[title], 28, '')}</span></a></li>
+				
+				{/loop}
+			{/pc}
+
+
+</ul>
+</div>
+
+<img src="daxibei/images/zxfb.jpg" style="margin-top:5px; float:left;"/>
+
+<div class="news_page_nr"><ul>
+
+
+			{pc:content action="hits" catid="$catid" num="10" order="monthviews DESC" cache="3600"}
+				{loop $data $r}
+				
+				
+			<li class="yhx"><a href="{$r[url]}"  width="126"  height="148" border="0" ><span class="title">{str_cut($r[title],56,'...')}</span></a></li>	
+
+				{/loop}
+			{/pc}
+
+
+
+</ul></div>
+
+</div>
+<div class="content_page_right"><div class="content_page_right_bt"><div class="content_page_right_bt_left">当前位置：<a href="{siteurl($siteid)}">首页</a><span> &gt; </span>{catpos($catid)} 正文 </div>
+</div>
+<div class="content_page_right_bt_right_nr"><div class="content_news">
+
+
+
+
+
+
+<div class="viewbox">
+  <div class="title">
+    <h2>{$title}</h2>
+  </div>
+  <!-- /title -->
+<div class="info">
+				<small>时间:</small>{$inputtime}<small>来源:</small>{$copyfrom} <small>点击:</small><span id="hits"></span></div>
+
+
+			<div class="content">
+			<table width='100%'>
+				<tr><td><p>&nbsp;</p>
+<p>　　
+
+{$content}
+
+</p>
+<p>&nbsp;</p>
+</td></tr>
+			</table>
+			</div><!-- /content -->
+<!-- *******分享代码******-->
+
+	<div class="dede_pages">
+		<ul class="pagelist">
+                  <strong>TAG标签：{loop $keywords $keyword}<a href="{APP_PATH}index.php?m=content&c=tag&catid={$catid}&tag={urlencode($keyword)}" class="blue">{$keyword}</a> 	{/loop}</strong>
+		</ul>
+	</div>
+<!-- /pages -->
+
+	<div class="boxoff">
+				<strong>------分隔线----------------------------</strong>
+		  </div>
+			<div class="handle">
+				<div class="context">
+					<ul>
+						<li>上一篇:<a href="{$previous_page[url]}">{$previous_page[title]}</a></li>
+						<br />
+						<li>下一篇:<a href="{$next_page[url]}">{$next_page[title]}</a> </li>
+					</ul>
+				</div><!-- /context -->
+			
+			</div><!-- /handle -->
+		</div>
+
+
+
+<div class="pright"> 
+
+
+</div>
+<!---------------------评论区------------------------>
+		<div class="release_t">相关文章</div>
+<ul class="release">
+
+
+          {pc:content action="relation" relation="$relation" id="$id" catid="$catid" num="5" keywords="$rs[keywords]"}
+              {if $data}
+       
+                        {loop $data $r}
+						
+						<li><a href="{$r[url]}" target="_blank">{$r[title]}</a></li>
+						
+                        {/loop}
+             
+              {/if}
+          {/pc}
+
+
+<div class="clear"></div>
+</ul>
+		
+		
+
+</div></div>
+</div>
+
+</div>
+
+
+<script language="JavaScript" src="{APP_PATH}api.php?op=count&id={$id}&modelid={$modelid}"></script>
+
+{template "content","footer"}

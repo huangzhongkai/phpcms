@@ -1,0 +1,324 @@
+{template "content","header"}
+
+<div id="ifocus">
+<!----------------------------banner修改----------------------------->
+<div id="container">
+		<div id="example">
+		
+			<div id="slides">
+				<div class="slides_container">
+				<img src='http://www.zzhpkj.com/uploads/120822/118-120R2114512B6.jpg' >
+<img src='http://www.zzhpkj.com/uploads/120822/118-120R2114453S7.jpg' >
+<img src='http://www.zzhpkj.com/uploads/120822/118-120R2114432413.jpg' >
+<img src='http://www.zzhpkj.com/uploads/120822/118-120R21143094G.jpg' >
+
+				
+				</div>
+		
+			</div>
+			
+		</div>
+		
+	</div>
+<!----------------------------banner修改----------------------------->
+
+</div>
+<div class="magtop"></div>
+<div class="nav">
+<!--------------------修改------------------------>
+<div class="items">
+	<div class="left_i">
+		<img src="daxibei/images/left_i.jpg">
+	</div>
+	<div class="item_con">
+		
+		
+		<li >
+		<img src="daxibei/images/item_1.jpg" class="up">
+			<p>
+			
+			内容精致，简明快展示公司形象。<br/>
+			<span>参考价格：<a style='color:red;text-decoration:none;' href="jianzhangtaocan/">[点击查看]</a></span></br/>
+			
+			</p>
+			<style type="text/css">
+				.more {display:block;float:right;margin-top:20px;margin-right:15px;}
+			</style>
+			<a class="more" style='color:red;text-decoration:none;' href="jianzhangtaocan/">[查看更多]</a>
+		</li>
+		
+		
+		
+		
+		<li id="item_2">
+		<img src="daxibei/images/item_2.jpg" class="up">
+			<p>
+			
+			B2C网站商店，网站产品销售展示。<br/>
+			<span>参考价格：<a style='color:red;text-decoration:none;' href="jianzhangtaocan/">[点击查看]</a></span></br/>
+			
+			</p>
+			<a class="more" style='color:red;text-decoration:none;' href="jianzhangtaocan/">[查看更多]</a>
+		</li>
+		
+		
+		
+		
+		<li id="item_3">
+		<img src="daxibei/images/item_3.jpg" class="up">
+			<p>
+			B2B、HR行业网站，不动产行业网站等。<br/>
+			<span>参考价格：<a style='color:red;text-decoration:none;' href="jianzhangtaocan/">[点击查看]</a></span></br/>
+			
+			</p>
+			<a class="more" style='color:red;text-decoration:none;' href="jianzhangtaocan/">[查看更多]</a>
+		</li>
+		
+		
+		
+		<li id="item_4">
+		<img src="daxibei/images/item_4.jpg" class="up">
+			<p>
+			量身为您定做您需要的网站。<br/>
+			<span>参考价格：<a style='color:red;text-decoration:none;' href="jianzhangtaocan/">[点击查看]</a></span></br/>
+			
+			</p>
+			<a class="more" style='color:red;text-decoration:none;' href="jianzhangtaocan/">[查看更多]</a>
+		</li>
+		
+		
+
+	</div>
+	<div class="right_i">
+		<img src="daxibei/images/right_i.jpg">
+	</div>
+
+</div>
+
+<!--------------------修改------------------------>
+</div>
+
+
+
+
+<div class="index_case">
+<!----------更改区域------------->
+	 <div class="in_showcase">
+		   <!--<div class="in_scleft">
+				<a href="chenggonganli/"><img src="daxibei/images/shcase.png"></a>
+		   </div>-->
+		   <div class="in_scright">
+				<ul class="in_scrightul">
+					<li id="zzz1" onmouseover="setTab('zzz',1,2)" class="hover"><a style="cursor:pointer;">精品案例</a></li>
+					<li id="zzz2" onmouseover="setTab('zzz',2,2)"><a style="cursor:pointer;">最新案例</a></li>
+				</ul>
+				<a href="chenggonganli/" style="display:block;width:40px;height:13px;float:right;margin-right:15px;margin-top:13px;" target="_blank"></a>
+		   </div>
+	 </div>
+<!----------更改区域------------->
+  <div class="index_case_nr">
+  <div id="con_zzz_1" >
+    <ul>
+		
+		
+		
+		
+
+			
+			
+             {pc:content  action="lists" catid="11" order="updatetime DESC" thumb="1" num="8" return="info"}
+             {loop $info $v}
+            	
+				  <li>
+                <center>
+                  <a href="{$v['url']}" target="_blank"><img src='{thumb($r[thumb])}' border='0' width='211' height='149' alt='{$r[title]}'></a>
+                </center>
+             <a class="case_tit" href="{$r[url]}" target="_blank">	{$v['wangzhibugeili']}	</a>
+			<a class='case_website' style='color:red;text-decoration:none;' href="{$v['wangzhibugeili']}" target='_blank' rel='nofollow'>[访问]</a>
+			</li>		
+                  
+			 
+                {/loop}
+       
+	   
+            {/pc}
+			
+			
+
+
+	
+			
+  
+    </ul>
+	</div>
+	 <div id="con_zzz_2" style="display:none">
+    <ul>
+	
+	
+	
+	
+	            {pc:content  action="lists" catid="11" order="updatetime DESC" thumb="1" num="8" return="info"}
+             {loop $info $v}
+            	
+				  <li>
+                <center>
+                  <a href="{$v['url']}" target="_blank"><img src='{thumb($r[thumb])}' border='0' width='211' height='149' alt='{$r[title]}'></a>
+                </center>
+             <a class="case_tit" href="{$r[url]}" target="_blank">	{$v['wangzhibugeili']}	</a>
+			<a class='case_website' style='color:red;text-decoration:none;' href="{$v['wangzhibugeili']}" target='_blank' rel='nofollow'>[访问]</a>
+			</li>		
+                  
+			 
+                {/loop}
+       
+	   
+            {/pc}
+	
+  
+    </ul>
+	</div>
+  </div>
+</div>
+
+<div class="magtop"></div>
+<div class="add">
+
+<div  class="add_1">
+<div class="index_case_bt">
+<span class="index_case_bt_left">网站建设</span>
+<span class="index_case_bt_right">
+
+<a href="web/"><img src="daxibei/images/case_34.gif" alt="郑州网站建设,郑州网络公司,郑州网站推广,郑州网站优化" /></a>
+</span>
+</div>
+<img src="daxibei/images/p_wzja.jpg"style="margin-top:3px" width="298" height="60"  alt="郑州网站建设,郑州网络公司,郑州网站推广,郑州网站优化" />
+
+<div > 
+<ul>
+
+
+                {pc:content action="lists" catid="11" num="4" order="id DESC" return="info"}
+
+
+                {loop $info $v}
+				
+		<li><a href="{$v['url']}" target="_blank" title="{$v['title']}"{title_style($v[style])}>{str_cut($v['title'],40)}</a></li>
+
+                {/loop}
+
+                {/pc}
+
+</ul>
+ </div>
+
+ </div>
+<div  class="add_2">
+<div class="index_case_bt">
+<span class="index_case_bt_left">网站优化</span>
+<span class="index_case_bt_right">
+<a href="seoer/"><img src="daxibei/images/case_34.gif" alt="郑州网站建设,郑州网络公司,郑州网站推广,郑州网站优化" /></a>
+</span>
+
+</div><img src="daxibei/images/p_yh.jpg" style="margin-top:3px" alt="郑州网站建设,郑州网络公司,郑州网站推广,郑州网站优化" />
+<div > <ul>
+
+
+                {pc:content action="lists" catid="11" num="4" order="id DESC" return="info"}
+
+
+                {loop $info $v}
+				
+		<li><a href="{$v['url']}" target="_blank" title="{$v['title']}"{title_style($v[style])}>{str_cut($v['title'],40)}</a></li>
+
+                {/loop}
+
+                {/pc}
+
+</ul>
+ </div>
+</div>
+<div  class="add_3"> 
+
+<div class="index_case_bt">
+<span class="index_case_bt_left">行业动态</span>
+<span class="index_case_bt_right">
+<a href="school/xingyedongtai/"><img src="daxibei/images/case_34.gif" alt="郑州网站建设,郑州网络公司,郑州网站推广,郑州网站优化" /></a>
+</span>
+</div>
+<img src="daxibei/images/p_dt.jpg" style="margin-top:3px" alt="郑州网站建设,郑州网络公司,郑州网站推广,郑州网站优化">
+<div > <ul>
+
+
+                {pc:content action="lists" catid="11" num="4" order="id DESC" return="info"}
+
+
+                {loop $info $v}
+				
+		<li><a href="{$v['url']}" target="_blank" title="{$v['title']}"{title_style($v[style])}>{str_cut($v['title'],40)}</a></li>
+
+                {/loop}
+
+                {/pc}
+</ul>
+ </div>
+
+</div>
+
+</div>
+
+
+
+
+<div class="yqlj magtop8">
+<div class="yqlj_Menubox">
+<ul>
+   <li id="yqlj1" onmouseover="setTab('yqlj',1,4)"  class="hover">合作伙伴</li>
+   <li id="yqlj2" onmouseover="setTab('yqlj',2,4)" >友情链接</li>
+  
+</ul>
+</div>
+ <div class="yqlj_Contentbox">  
+   <div id="con_yqlj_1" >
+   
+   
+         {pc:link  action="type_list" siteid="$siteid" linktype="1" order="listorder DESC" num="8" return="pic_link"}
+        {loop $pic_link $v}
+		   <div class="yqlj_pic"><a href="{$v['url']}" title="{$v['name']}" target="_blank"><img src="{$v[logo]}"></a></div> 
+
+		 {/loop}
+        {/pc}
+ 
+   </div>
+   <div id="con_yqlj_2" style="display:none"><div class="yqlj_nr"> <dd>
+			<ul class="f5">
+		      
+			
+			
+	{pc:link  action="type_list" siteid="$siteid" order="listorder DESC" num="10" return="dat"}
+
+		{loop $dat $v}
+              {if $type==0}
+               <li><a href="{$v[url]}" target="_blank">{$v[name]}</a></li>
+              {/if}
+		{/loop}
+
+	{/pc}
+
+			
+
+		   </ul>
+		   
+		   </dd>
+
+</div></div>
+
+ </div>
+
+</div>
+
+
+
+
+
+
+{template "content","footer"}

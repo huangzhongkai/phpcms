@@ -1,0 +1,10 @@
+.viewbox .handle{
+	height:auto;
+	padding-top:0px;
+}
+.content_page_right li{ padding-top:0px; width:auto; margin-right:30px; border:none!important; }
+.viewbox .actbox{padding-top:0px;}
+.clear { clear:both;}
+.release_t { line-height:25px; padding-left:15px; background:#cccccc; width:695px; border:solid 1px #ccccee; border-bottom:none; }
+ul.release { padding:0px; margin:0px; display:block; width:710px; height:auto; list-style:none; border:solid 1px #ccccee; border-top:none; }
+ul.release li { padding:0px; margin:0px; float:left; display:block; width:340px; list-style:none; line-height:25px; padding-left:10px;}

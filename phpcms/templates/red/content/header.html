@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+<meta name="keywords" content="{$SEO['keyword']}">
+<meta name="description" content="{$SEO['description']}">
+
+
+<link href="daxibei/css/index.css" rel="stylesheet" type="text/css"; />
+
+
+<script language="javascript" type="text/javascript" src="daxibei/css/flash.js" ></script>
+<!--banner--->
+	<link rel="stylesheet" href="daxibei/templets/default/style/global.css">
+	<script src="daxibei/templets/default/js/slides.min.jquery.js"></script>
+</head>
+<body >
+
+
+<div id="tops">
+	<div id="top">
+		<div class="top_left"><img src="daxibei/images/logo.png" alt="bbs.daxibei.org"></div>
+		<div  class="top_right"><img src="daxibei/images/tel.jpg" alt="大西北cms模板" /></div>
+	</div>
+</div>
+
+
+<div id="meau_bg">
+<div  class="meau"><ul>
+{pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"}
+
+            <li  id="home_bg"><a href="{siteurl($siteid)}/index.php"><strong>首页</strong></a></li>
+
+			{loop $data $r}
+			
+			<li class="tututu"><strong><a href="{$r[url]}" >{$r[catname]}</a></strong></li>
+			<!--<li class="tututu"><strong><a href="{$r[url]}" target="_blank">{$r[catname]}</a></strong></li> -->
+
+			{/loop}
+			
+    {/pc}
+    
+</ul></div>
+
+</div>
+

@@ -1,0 +1,124 @@
+{template "content","header"}
+
+<link href="daxibei/css/index.css" rel="stylesheet" type="text/css"; />
+<link href="daxibei/css/article.css" rel="stylesheet" type="text/css"; />
+<link href="daxibei/css/images/case.css" rel="stylesheet" type="text/css"; />
+
+<div class="magtop"></div>
+
+
+
+
+
+
+<div class="box">
+  <div class="casetpic"><img src="daxibei/css/images/bpic.jpg"/></div>
+  <div class="cmainlist"><span class="cnow">当前位置：<a href="{siteurl($siteid)}">首页</a><span> > </span>{catpos($catid)} 列表</span></div>
+ 
+ <div class="casetitle">
+ <ul class="casett">
+    <li>
+	 <div class="casettleft">行&nbsp;&nbsp;业：</div>
+	 <div class="casettright">
+	   <a href="/chenggonganli">不限</a>
+	   
+	   <a href='http://www.zzhpkj.com/chenggonganli/Mechanics/'>机械制造</a>
+	   
+	   <a href='http://www.zzhpkj.com/chenggonganli/shop/'>购物商城</a>
+	   
+	   <a href='http://www.zzhpkj.com/chenggonganli/Housead/'>房产广告</a>
+	   
+	   <a href='http://www.zzhpkj.com/chenggonganli/Furniture/'>家具照明</a>
+	   
+	   <a href='http://www.zzhpkj.com/chenggonganli/Art/'>艺术设计</a>
+	   
+	   <a href='http://www.zzhpkj.com/chenggonganli/medicine/'>纺织医药</a>
+	   
+	   <a href='http://www.zzhpkj.com/chenggonganli/jianzhuzhuangshi/'>建筑装饰</a>
+	   
+	   <a href='http://www.zzhpkj.com/chenggonganli/shipinjiuye/'>食品酒业</a>
+	   
+	   <a href='http://www.zzhpkj.com/chenggonganli/zhengxingmeirong/'>整形美容</a>
+	   
+	   <a href='http://www.zzhpkj.com/chenggonganli/auto/'>学院教育</a>
+	   
+	   <a href='http://www.zzhpkj.com/chenggonganli/zhaoshanglei/'>服饰饰品</a>
+	   
+	   <a href='http://www.zzhpkj.com/chenggonganli/zhengfumenhu/'>政府部门</a>
+	   
+	   <a href='http://www.zzhpkj.com/chenggonganli/kejigongsi/'>饮食行业</a>
+	   
+	   <a href='http://www.zzhpkj.com/chenggonganli/jinrongtouzi/'>金融投资</a>
+	   
+	   <a href='http://www.zzhpkj.com/chenggonganli/qichejiaotong/'>汽车交通</a>
+	   
+	   <a href='http://www.zzhpkj.com/chenggonganli/zonghemenhu/'>综合门户</a>
+	   
+	   <a href='http://www.zzhpkj.com/chenggonganli/jiudianhunqing/'>酒店婚庆</a>
+	   
+	   <a href='http://www.zzhpkj.com/chenggonganli/gongyezhonggong/'>工业重工</a>
+	   
+	   <a href='http://www.zzhpkj.com/chenggonganli/xiuxiannongzhuang/'>休闲农庄</a>
+	   
+	   <a href='http://www.zzhpkj.com/chenggonganli/yiliaobaojian/'>医疗保健</a>
+	   
+	   <a href='http://www.zzhpkj.com/chenggonganli/huafeinongzi/'>化肥农资</a>
+	   
+	   <a href='http://www.zzhpkj.com/chenggonganli/qitawangzhan/'>其他网站</a>
+	   
+	   <a href='http://www.zzhpkj.com/chenggonganli/Flashwangzhananli/'>Flash网站案例</a>
+	   
+	 </div>
+	</li>
+       <li>
+	 <div class="casettleft">类&nbsp;&nbsp;型：</div>
+	 <div class="casettright">
+	   <a href="/chenggonganli">不限</a>
+	   <a href="#">经典案例</a>   
+	 </div>
+	</li>
+ </ul>
+ </div>
+ 
+ 
+ <div class="csmainpic">
+ 
+ 
+ 
+ 
+ 
+{pc:content action="lists" catid="$catid" num="5" order="id DESC" page="$page"}
+
+{loop $data $r}
+ 
+	 <ul  class="cspiclist">
+	<li>
+	 <a href="{$r[url]}" target="_blank">
+		<img class="img_01" src="{thumb($r[thumb],110,90)}" width="213" height="150" complete="complete" />
+	
+		<cite>{$r[title]}</cite></a>
+	 </li>
+	 </ul>
+
+{/loop}
+
+{/pc}
+ 
+ 
+	
+	 
+
+   <div class="clear"></div>
+ </div>
+ 
+<div class="dede_page">
+		<ul>
+
+<li>{$pages}</li>
+
+	  </ul>
+	</div>
+</div>		
+
+
+{template "content","footer"}

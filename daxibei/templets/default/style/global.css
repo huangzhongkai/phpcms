@@ -1,0 +1,126 @@
+/* 
+	Resets defualt browser settings
+	reset.css
+
+	Page style
+*/
+
+
+#container {
+	width:980px;
+
+	margin:0 auto;
+	position:relative;
+	z-index:0;
+}
+
+#example {
+	width:970px;
+	height:350px;
+	margin:0 auto;
+	margin-top:10px;
+}
+
+#ribbon {
+	position:absolute;
+	top:-3px;
+	left:-15px;
+	z-index:500;
+}
+
+
+/*
+	Slideshow
+*/
+
+#slides {
+
+	margin:0 auto;
+
+	z-index:100;
+}
+
+/*
+	Slides container
+	Important:
+	Set the width of your slides container
+	Set to display none, prevents content flash
+*/
+
+.slides_container {
+	width:970px;
+	overflow:hidden;
+	height:336px;
+	display:none;
+}
+
+
+
+
+.slides_container  img {
+	display:block;
+	width:970px;
+	height:324px;
+}
+
+/*
+	Next/prev buttons
+*/
+
+
+
+/*
+	Pagination
+*/
+
+.pagination {
+    margin: 0 auto;
+    position: absolute;
+    top: 300px;
+	left:440px;
+    width: 100px;
+    z-index: 500;
+}
+
+.pagination li {
+	float:left;
+	margin:0 1px;
+	list-style:none;
+}
+
+.pagination li a {
+	display:block;
+	width:12px;
+	height:0;
+	padding-top:12px;
+	background-image:url(../images/test_images/pagination.png);
+	background-position:0 0;
+	float:left;
+	overflow:hidden;
+}
+
+.pagination li.current a {
+	background-position:0 -12px;
+}
+
+/*
+	Footer
+*/
+
+#footer {
+	text-align:center;
+	width:580px;
+	margin-top:9px;
+	padding:4.5px 0 18px;
+	border-top:1px solid #dfdfdf;
+}
+
+#footer p {
+	margin:4.5px 0;
+	font-size:1.0em;
+}
+
+/*
+	Anchors
+*/
+
